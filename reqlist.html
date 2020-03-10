@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Enrollment</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+<link href="../econ/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<nav class="navbar navbar-expand-md">
+	<a class="navbar-brand" href="index.html"> <img src="logo.png" height="50%" width="40%"> </a>
+	<button class="navbar-toggler navbar-dark" data-target="#main-navigation" data-toggle="collapse" type="button">
+	<span class="navbar-toggler-icon"></span></button>
+	<div id="main-navigation" class="collapse navbar-collapse">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="steps.html">Tracker</a> </li>
+			<li class="nav-item"><a class="nav-link" href="#">Requirement List</a> </li>
+			<li class="nav-item"><a class="nav-link" href="help.html">Help</a> </li>
+			<li class="nav-item"><a class="nav-link" href="index.html">Log-out</a> </li>
+		</ul>
+	</div>
+</nav>
+<div class="container">
+   <h3>Requirement List</h3>
+   <hr>
+            <label>STEP 1: PROCEED TO THE ADMISSIONS OFFICE</label>
+            <li> Present CAT Acceptance Letter and other required documents</li>
+			<li> Secure your Student Number and Student Information Sheet</li>
+            <label>STEP 2: PROCEED TO THE REGISTRAR’S OFFICE</label>
+            <li> Submit all documents for evaluation</li>
+			<li> Secure your Schedule and Assessment Form (SAF)</li>
+            <label>STEP 3: PROCEED TO THE ACCOUNTING OFFICE</label>
+            <li> Have your fees assessed and pay at the Cashier</li>
+			<li> BE sure to get your Official Receipt </li>
+			<label>STEP 4: RETURN TO THE REGISTRAR’S OFFICE</label>
+            <li> Present your Official Receipt to claim your Certificate of Registration (COR)</li>
+			<li> Have your photo taken for your Student Identification Card (ID) </li>
+			<li> Return to the Admissions Office for final enrollment verification </li>
+			<label>STEP 5: PROCEED TO THE STUDENT AFFAIRS OFFICE</label>
+            <li> Undergo interview with the Guidance Counselor</li>
+			<li> Have your measurement taken for the uniform </li>
+			<li> Get your medical recommendation </li>
+			
+   <hr>
+</div>
+<script>
+$('.next').click(function(){
+
+  var nextId = $(this).parents('.tab-pane').next().attr("id");
+  $('[href=#'+nextId+']').tab('show');
+  return false;
+  
+})
+
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  
+  //update progress
+  var step = $(e.target).data('step');
+  var percent = (parseInt(step) / 5) * 100;
+  
+  $('.progress-bar').css({width: percent + '%'});
+  $('.progress-bar').text("Step " + step + " of 5");
+  
+  //e.relatedTarget // previous tab
+  
+})
+
+$('.first').click(function(){
+
+  $('#myWizard a:first').tab('show')
+
+})
+
+</script>
+</body>
+
+</html>

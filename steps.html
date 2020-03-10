@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Enrollment</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+<link href="../econ/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<nav class="navbar navbar-expand-md">
+	<a class="navbar-brand" href="index.html"> <img src="logo.png" height="50%" width="40%"> </a>
+	<button class="navbar-toggler navbar-dark" data-target="#main-navigation" data-toggle="collapse" type="button">
+	<span class="navbar-toggler-icon"></span></button>
+	<div id="main-navigation" class="collapse navbar-collapse">
+		<ul class="navbar-nav">
+			<li class="nav-item active a1"><a class="nav-link" href="#">Tracker</a> </li>
+			<li class="nav-item a1"><a class="nav-link" href="reqlist.html">Requirement List</a> </li>
+			<li class="nav-item a1"><a class="nav-link" href="help.html">Help</a> </li>
+			<li class="nav-item a1"><a class="nav-link" href="index.html">Log-out</a> </li>
+		</ul>
+	</div>
+</nav>
+
+ <div class="container" id="myWizard">
+  <br>
+   <h3>Enrollment Checklist</h3>
+  
+   <hr>
+
+   <div class="progress">
+     <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="5" style="width: 20%;">
+       Step 1 of 5
+     </div>
+	 <br>
+   </div>
+<br>	
+   <div class="navbar">
+      <div class="navbar-inner">
+            <ul class="nav nav-pills">
+               <li class="active a1"><a href="#s1" data-toggle="tab" data-step="1">Step 1</a></li>
+               <li class="a1"><a href="#s2" data-toggle="tab" data-step="2">Step 2</a></li>
+               <li class="a1"><a href="#s3" data-toggle="tab" data-step="3">Step 3</a></li>
+               <li class="a1"><a href="#s4" data-toggle="tab" data-step="4">Step 4</a></li>
+               <li class="a1"><a href="#s5" data-toggle="tab" data-step="5">Step 5</a></li>
+            </ul>
+      </div>
+   </div>
+   <br>
+   <div class="tab-content">
+      <div class="tab-pane slide-content active" id="s1">
+         
+        <div class="well" > 
+            <h2>STEP 1: PROCEED TO THE ADMISSIONS OFFICE</h2>
+            <li> Present CAT Acceptance Letter and other required documents</li>
+			<li> Secure your Student Number and Student Information Sheet</li>
+            <br>
+            <label>Enter your Student Number to confirm your Enrollment.</label>
+            <input class="form-control input-lg" type="text" name="studentnum" placeholder="Student Number" required="required" pattern="[0-9]{9}">
+        </div>
+<br>
+		   <a class="btn btn-success next" href="#s2">Continue</a>
+      </div>
+      <div class="tab-pane slide-content" id="s2">
+         <div class="well" > 
+          
+            <h2>STEP 2: PROCEED TO THE REGISTRAR’S OFFICE</h2>
+            <li> Submit all documents for evaluation</li>
+			<li> Secure your Schedule and Assessment Form (SAF)</li>
+            <br>
+            <label>Enter your Schedule and Assessment Form (SAF) number to confirm your schedule.</label>
+            <input class="form-control  input-lg" type="text" name="safnum" placeholder="SAF Number" required="required">
+         </div>
+		 <br>
+
+         <a class="btn btn-success next" href="#s3">Continue</a>
+      </div>
+      <div class="tab-pane slide-content" id="s3">
+        <div class="well" > 
+		<h2>STEP 3: PROCEED TO THE ACCOUNTING OFFICE</h2> 
+		<li> Have your fees assessed and pay at the Cashier</li>
+			<li> BE sure to get your Official Receipt </li>
+			<br>
+			<label>Enter the Official Receipt number to confirm your payment.</label>
+            <input class="form-control input-lg" type="text" name="recnum" placeholder="Receipt Number" required="required">
+			</div>
+			<br>
+
+         <a class="btn btn-success next" href="#s4">Continue</a>
+      </div>
+      <div class="tab-pane slide-content" id="s4">
+        <div class="well" > 
+		<h2>STEP 4: RETURN TO THE REGISTRAR’S OFFICE</h2> 
+		<li> Present your Official Receipt to claim your Certificate of Registration (COR)</li>
+			<li> Have your photo taken for your Student Identification Card (ID) </li>
+			<li> Return to the Admissions Office for final enrollment verification </li>
+			<br>
+			<label>Enter your Certificate of Registration (COR) for final confirmation.</label>
+            <input class="form-control input-lg" type="text" name="cornum" placeholder="COR Number" required="required">
+			</div>
+			<br>
+
+         <a class="btn btn-success next" href="#s5">Continue</a>
+      </div>
+      <div class="tab-pane slide-content" id="s5">
+        <div class="well" > 
+		<h2>STEP 5: PROCEED TO THE STUDENT AFFAIRS OFFICE</h2> 
+		<li> Undergo interview with the Guidance Counselor</li>
+			<li> Have your measurement taken for the uniform </li>
+			<li> Get your medical recommendation </li>
+<ul>You're Done! Welcome iTamaraws! See you on campus.</ul>
+</div>
+<br>
+         <a class="btn btn-success first" href="index.html">Log-out</a>
+      </div>
+   </div>
+   <hr>
+
+</div>
+
+<script>
+$('.next').click(function(){
+
+  var nextId = $(this).parents('.slide-content').next().attr("id");
+  
+  $('[href="#'+nextId+']"').tab('show');
+  return false;
+  
+});
+
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  
+  //update progress
+  var step = $(e.target).data('step');
+  var percent = (parseInt(step) / 5) * 100;
+  
+  $('.progress-bar').css({width: percent + '%'});
+  $('.progress-bar').text("Step " + step + " of 5");
+  
+  //e.relatedTarget // previous tab
+  
+});
+
+</script>
+</body>
+
+</html>
